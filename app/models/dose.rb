@@ -2,12 +2,12 @@
 
 # Dose Model
 class Dose < ApplicationRecord
-  belongs_to :Ingredient
-  belongs_to :Cocktail
+  belongs_to :ingredient
+  belongs_to :cocktail
 
   validates :description, presence: true
   validates :cocktail, presence: true
   validates :ingredient, presence: true
 
-  validate_uniqueness_of :dose_id, scope: [ :ingredient_id, :cocktail_id ]
+  validate_uniqueness_of :dose_id, scope: %i[ingredient_id cocktail_id]
 end
