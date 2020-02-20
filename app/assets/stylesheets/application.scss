@@ -20,3 +20,36 @@ body {
   text-align: left;
   width: 100%;
 }
+
+.container {
+  width: 50%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    input {
+      margin-right: 4px;
+    }
+
+    a {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
