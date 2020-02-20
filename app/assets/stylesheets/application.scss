@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/form";
+
+body {
+  padding: 30px;
+  background-color: #2D3D4E;
+  color: white;
+  text-align: left;
+  width: 100%;
+}
