@@ -1,8 +1,18 @@
 <div class="container">
-    <ul>
-        <% @cocktails.each do |cocktail| %>
-            <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-        <% end %>
-    </ul>
     <%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-outline-info" %>
+    <div class="row">
+        <% @cocktails.each do |cocktail| %>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= cocktail.name %></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><%= cocktail.ingredients.name %></h6>
+                    </div>
+                    <div class="card-footer">
+                        <%= link_to "More info", cocktail_path(cocktail), class: "btn btn-info" %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
 </div>
