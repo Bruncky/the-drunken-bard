@@ -6,7 +6,12 @@
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title"><%= cocktail.name %></h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><%= cocktail.ingredients.name %></h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Ingredients</h6>
+                        <ul>
+                            <% cocktail.doses.each do |dose| %>
+                                <li><%= dose.ingredient.name %></li>
+                            <% end %>
+                        </ul>
                     </div>
                     <div class="card-footer">
                         <%= link_to "More info", cocktail_path(cocktail), class: "btn btn-info" %>
