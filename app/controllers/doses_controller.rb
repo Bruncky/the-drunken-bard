@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# DosesController
 class DosesController < ApplicationController
   before_action :set_cocktail, only: %i[new create]
   before_action :set_dose, only: %i[destroy]
@@ -16,13 +15,13 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render "cocktails/new"
+      render 'cocktails/new'
     end
   end
 
   def destroy
     @dose.destroy
-    redirect_to cocktail_path(@dose.cocktail)
+    redirect_to cocktails_path
   end
 
   private
