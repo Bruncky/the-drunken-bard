@@ -16,3 +16,33 @@
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+
+const doseForm = document.getElementById('dose-form');
+const addIngredientsButton = document.getElementById('add-ingredients-button')
+const cancelButton = document.getElementById('cancel-button')
+
+// Handling the button changing from "Add Ingredient" to "Cancel"
+addIngredientsButton.addEventListener("click", () => {
+
+  // Toggle Bootstrap classes to turn from blue to red
+  addIngredientsButton.classList.toggle("btn-outline-primary")
+  addIngredientsButton.classList.toggle("btn-danger")
+
+  // Check inner text and change accordingly
+  if (addIngredientsButton.innerText === "Add Ingredient") {
+    addIngredientsButton.innerText = "Cancel"
+  } else {
+    addIngredientsButton.innerText = "Add Ingredient"
+  }
+
+  // Unfocus the button after pressing
+  addIngredientsButton.blur()
+
+  // ----- Dropdown -----
+
+  // Set transition duration for dropdown
+  doseForm.style.transition = '0.7s'
+
+  // Toggle between invisible and visible using Bootstrap class "d-none"
+  doseForm.classList.toggle("d-none")
+});
