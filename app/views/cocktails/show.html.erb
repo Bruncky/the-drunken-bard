@@ -1,11 +1,11 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1546171753-97d7676e4602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);">
   <div class="container">
-    <h1><%= @cocktail.name %></h1>
+    <h1 style="font-size: 42px;"><%= @cocktail.name %></h1>
     <p></p>
   </div>
 </div>
 <div class="container">
-    <h1>List of Ingredients</h1>
+    <h1 style="font-size: 40px;">List of Ingredients</h1>
     <div class="d-flex">
         <%= link_to "Back to Cocktails", root_path, class: "btn btn-outline-danger" %>
         <button type="button" class="btn btn-outline-primary" id="add-ingredients-button">Add Ingredient</button>
