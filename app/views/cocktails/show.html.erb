@@ -1,6 +1,20 @@
 <div class="container">
     <h1><%= @cocktail.name %></h1>
-    <%= link_to "Back to Cocktails", root_path, class: "btn btn-danger" %>
+    <div class="d-flex">
+        <%= link_to "Back to Cocktails", root_path, class: "btn btn-outline-danger" %>
+        <button type="button" class="btn btn-outline-primary" id="add-ingredients-button">Add Ingredient</button>
+    </div>
+    <%= form_for [@cocktail, @dose] do |form| %>
+        <div class="form-group d-none" id="dose-form">
+            <label for="dose-description">Dose size</label>
+            <%= form.text_field :description, id: "dose-description", class: "form-control", autocomplete: "off" %>
+            <small class="form-text text-muted">What's the size of the dose (in parts)?</small>
+            <label for="ingredient-select">Ingredient</label>
+            <%= form.select :ingredient_id, Ingredient.all.collect { |ingredient| [ingredient.name, ingredient.id] }, {prompt: ''}, {id: "ingredient-select", class: "form-control"} %>
+            <small class="form-text text-muted">Choose the ingredient to add a dose</small>
+            <%= form.submit "Confirm", class: "btn btn-outline-success" %>
+        </div>
+    <% end %>
     <ul>
         <% @cocktail.doses.each do |dose| %>
             <li><strong><%= dose.description %></strong> <%= dose.ingredient.name %></li>
