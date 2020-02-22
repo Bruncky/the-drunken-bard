@@ -21,7 +21,7 @@
             <%= form.submit "Confirm", class: "btn btn-outline-success", id: "submit-button" %>
         </div>
     <% end %>
-    <ul>
+    <ul id="show-ingredients-list">
         <% @cocktail.doses.each do |dose| %>
             <li><strong><%= dose.description %></strong> <%= dose.ingredient.name %></li>
         <% end %>

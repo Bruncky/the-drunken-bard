@@ -3,13 +3,6 @@ ul {
   padding: 0;
 
   li {
-    font-size: 19px;
-
-    &::before {
-      content: "\1F378";
-      margin-right: 10px;
-    }
-
     input {
       margin-right: 4px;
     }
@@ -20,6 +13,17 @@ ul {
       &:hover {
         opacity: 1;
       }
+    }
+  }
+}
+
+#show-ingredients-list {
+  li {
+    font-size: 19px;
+
+    &::before {
+      content: "\1F378";
+      margin-right: 10px;
     }
   }
 }
