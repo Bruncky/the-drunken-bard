@@ -1,0 +1,25 @@
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 20px;
+
+    &::before {
+      content: "\1F378";
+      margin-right: 10px;
+    }
+
+    input {
+      margin-right: 4px;
+    }
+
+    a {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
