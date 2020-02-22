@@ -10,7 +10,7 @@
             <%= form.text_field :description, id: "dose-description", class: "form-control", autocomplete: "off" %>
             <small class="form-text text-muted">What's the size of the dose (in parts)?</small>
             <label for="ingredient-select">Ingredient</label>
-            <%= form.select :ingredient_id, Ingredient.all.collect { |ingredient| [ingredient.name, ingredient.id] }, {prompt: ''}, {id: "ingredient-select", class: "form-control"} %>
+            <%= form.select :ingredient_id, Ingredient.all.collect { |ingredient| [ingredient.name, ingredient.id] }.sort, {prompt: ''}, {id: "ingredient-select", class: "form-control"} %>
             <small class="form-text text-muted">Choose the ingredient to add a dose</small>
             <%= form.submit "Confirm", class: "btn btn-outline-success" %>
         </div>
