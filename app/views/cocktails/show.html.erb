@@ -5,7 +5,7 @@
         <button type="button" class="btn btn-outline-primary" id="add-ingredients-button">Add Ingredient</button>
     </div>
     <%= form_for [@cocktail, @dose] do |form| %>
-        <div class="form-group d-none" id="dose-form">
+        <div class="form-group" id="dose-form">
             <label for="dose-description">Dose size</label>
             <%= form.text_field :description, id: "dose-description", class: "form-control", autocomplete: "off" %>
             <small class="form-text text-muted">What's the size of the dose (in parts)?</small>
