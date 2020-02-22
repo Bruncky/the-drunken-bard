@@ -12,7 +12,7 @@
             <label for="ingredient-select">Ingredient</label>
             <%= form.select :ingredient_id, Ingredient.all.collect { |ingredient| [ingredient.name, ingredient.id] }.sort, {prompt: ''}, {id: "ingredient-select", class: "form-control"} %>
             <small class="form-text text-muted">Choose the ingredient to add a dose</small>
-            <%= form.submit "Confirm", class: "btn btn-outline-success" %>
+            <%= form.submit "Confirm", class: "btn btn-outline-success", id: "submit-button" %>
         </div>
     <% end %>
     <ul>
