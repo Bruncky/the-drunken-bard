@@ -1,4 +1,16 @@
 <div class="banner home">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Cocktails", root_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
 </div>
 <div class="container">
     <%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-outline-primary" %>
@@ -16,7 +28,7 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <%= link_to "More info", cocktail_path(cocktail), class: "btn btn-info" %>
+                        <%= link_to "More info", cocktail_path(cocktail), class: "btn btn-outline-dark" %>
                     </div>
                 </div>
             </div>

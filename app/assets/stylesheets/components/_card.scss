@@ -1,11 +1,16 @@
 .card {
   margin: 15px auto;
   border-radius: 5px;
+  background-color: $card-background-color;
   color: black;
 
   ul {
     li {
       margin-left: 8px;
     }
+  }
+
+  .btn {
+    width: 100%;
   }
 }
