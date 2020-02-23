@@ -3,10 +3,13 @@
 # CocktailsController
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: %i[show]
+  before_action :set_all_cocktails, only: %i[home index all]
 
-  def index
-    @cocktails = Cocktail.all
-  end
+  def home; end
+
+  def index; end
+
+  def all; end
 
   def show
     @ingredient = Ingredient.new
@@ -31,6 +34,10 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name)
+  end
+
+  def set_all_cocktails
+    @cocktails = Cocktail.all
   end
 
   def set_cocktail
