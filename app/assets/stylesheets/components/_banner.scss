@@ -1,7 +1,10 @@
 .banner {
   width: 100%;
-  height: 300px;
+  height: 350px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &.home {
     height: 250px;
@@ -9,14 +12,17 @@
     background-color: #272C33;
     background-image: url("logo.png");
     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+
+    img {
+      height: 400px;
+    }
   }
 
   h1 {
     margin: 0;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-family: $cocktail-header-font;
     font-size: 40px;
     font-weight: bold;
   }
@@ -28,9 +34,6 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 
-  img {
-    height: 400px;
-  }
 
   .btn {
     position: absolute;
