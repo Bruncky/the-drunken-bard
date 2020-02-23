@@ -2,15 +2,30 @@
   background: transparent;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 1);
-
-  &:hover {
+.navbar-light {
+  .navbar-nav .nav-link {
+    font-size: 20px;
     color: rgba(255, 255, 255, 1);
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+}
+
+#navbar-toggler {
+  border: none;
+  color: $navbar-dropdown-color;
+
+  img {
+    height: 20px;
   }
 }
 
-.solid {
-  background: #272C33;
+// This is the navbar dropdown that shows up on smaller screens
+.navbar.navbar-expand-sm.navbar-light.navbar-lewagon {
+  &.navbar-expanded {
+    background-color: $navbar-dropdown-color;
+  }
 }
