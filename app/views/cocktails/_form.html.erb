@@ -1,9 +1,13 @@
 <div class="container" style="width: 60%;">
-    <%= form_for @cocktail do |form| %>
+    <%= simple_form_for @cocktail do |form| %>
         <div class="form-group">
             <label for="cocktail-name">Name</label>
             <%= form.text_field :name, id: "cocktail-name", class: "form-control", autocomplete: "off" %>
             <small class="form-text text-muted">What's the name of the cocktail?</small>
+        </div>
+        <div class="form-group">
+            <%= form.input :photo, as: :file, id: "cocktail-photo", class: "form-control-file"%>
+            <small class="form-text text-muted">Whant to add a photo?</small>
         </div>
         <%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-outline-danger", role: "button" %>
         <%= form.submit "Confirm", class: "btn btn-outline-success" %>
