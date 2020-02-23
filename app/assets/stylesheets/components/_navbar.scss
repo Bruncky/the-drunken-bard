@@ -14,12 +14,13 @@
 
 }
 
-#navbar-toggler {
+#navbar-button {
   border: none;
   color: $navbar-dropdown-color;
 
   img {
-    height: 20px;
+    height: 25px;
+    border-radius: 50%;
   }
 }
 

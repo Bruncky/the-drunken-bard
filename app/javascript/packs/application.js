@@ -43,3 +43,11 @@ addIngredientsButton.addEventListener("click", () => {
   // Toggle between invisible and visible using Bootstrap class "d-none"
   doseForm.classList.toggle("active");
 });
+
+const navbar = document.getElementById("navbar")
+const navbarToggleButton = document.getElementById("navbar-button")
+
+navbarToggleButton.addEventListener("click", () => {
+  console.log("Hello")
+  navbar.classList.toggle("navbar-expanded")
+});
