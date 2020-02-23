@@ -1,15 +1,26 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1546171753-97d7676e4602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);">
-  <%= link_to root_path, class: "btn btn-outline-danger" do %>
-        <i class="fas fa-chevron-left"></i> Back to Cocktails
-  <% end %>
-  <div class="container">
-    <h1 style="font-size: 42px;"><%= @cocktail.name %></h1>
-    <p></p>
-  </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80);">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <%= link_to "Home", root_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "Cocktails", cocktails_path, class: "nav-link" %>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container cocktail">
+        <h1 style="font-size: 80px;"><%= @cocktail.name %></h1>
+    </div>
 </div>
 <div class="container">
     <h1 style="font-size: 40px;">List of Ingredients</h1>
     <div class="d-flex">
+        <%= link_to root_path, class: "btn btn-outline-danger" do %>
+            <i class="fas fa-chevron-left"></i> Home
+        <% end %>
         <button type="button" class="btn btn-outline-primary" id="add-ingredients-button">Add Ingredient</button>
     </div>
     <%= form_for [@cocktail, @dose] do |form| %>
@@ -25,7 +36,7 @@
     <% end %>
     <ul id="show-ingredients-list">
         <% @cocktail.doses.each do |dose| %>
-            <li><strong><%= dose.description %></strong> <%= dose.ingredient.name %></li>
+        <li><strong><%= dose.description %></strong> <%= dose.ingredient.name %></li>
         <% end %>
     </ul>
 </div>
