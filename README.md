@@ -1,24 +1,5 @@
-# README
+# Project Offline
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sadly, this project was taken offline because it was on a free Heroku plan when they changed the rules around the free plan.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feel free to reach out if you want to know more!
